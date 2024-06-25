@@ -20,4 +20,8 @@ public class Post {
     private LocalDateTime createdDate;
     private LocalDateTime updatedDate;
     private LocalDateTime deletedDate;
+
+    public Post(String body) {
+        this.body = body;
+    }
 }

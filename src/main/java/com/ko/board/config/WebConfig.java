@@ -21,9 +21,10 @@ public class WebConfig {
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         // 경로별 인가
+        // TODO 모든 요청 검증으로 수정
         http
                 .authorizeHttpRequests((auth) -> auth
-                        .anyRequest().authenticated());
+                        .anyRequest().permitAll());
 
         // SESSION -> STATELESS
         http
